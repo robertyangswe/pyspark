@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pyspark:
+    build: .
+    container_name: pyspark_container
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: on-failure
